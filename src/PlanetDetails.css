@@ -1,0 +1,80 @@
+.PlanetDetailsBg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  background-size:cover;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.planetName {
+  color: rgb(229, 215, 135);
+  margin-top: 100px;
+}
+
+.planetDescription {
+  color: white;
+}
+
+.planetSlides {
+  width: 80%;
+  height: 600px;
+  min-width: 1400px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 50px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.582);
+  padding-top: 20px;
+}
+
+.slidesBody {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  position: relative;
+}
+
+.slide {
+  width: 350px;
+  height: 150px;
+  background-color: black;
+  position: absolute;
+  transition: all 1.5s ease-in-out;
+  opacity: 0.6;
+}
+
+
+.picture {
+  width: 100%;
+}
+
+.slideDescription {
+  width: 95%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+  animation: appear 2.5s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

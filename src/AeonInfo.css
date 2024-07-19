@@ -1,0 +1,101 @@
+.backLink {
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  color: white;
+  font-size: 23px;
+  width: 150px;
+  height: 50px;
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.5;
+  z-index: 99;
+}
+
+.backLink:hover {
+  opacity: 1;
+}
+
+
+.SingleAeon {
+  z-index: 10;
+  position: relative;
+  animation: Appear 2s linear;
+  margin-top: 50px;
+}
+
+
+@keyframes Appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.AeonImage {
+  height: 100vh;
+  width: fit-content;
+  position: relative;
+}
+
+.AeonName {
+  width: fit-content;
+  height: 50px;
+  background-image: url('./images/name-bg.png');
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 10px;
+  color: white;
+  font-size: 25px;
+  opacity: 1;
+  animation: AppearName 4s linear;
+}
+
+@keyframes AppearName {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.AeonDescription {
+  width: 300px;
+  height: fit-content;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgba(0, 0, 0, 0.39);
+  border-left: 1px solid rgba(163, 155, 107, 0.849);
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 10px;
+  color: white;
+  font-size: 25px;
+  opacity: 1;
+  animation: AppearName 4s linear;
+  margin-top: 10px;
+  z-index: 15;
+  font-size: 22px;
+} 
+
+.aeonDetails{
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 15%;
+  top: 15%;
+}

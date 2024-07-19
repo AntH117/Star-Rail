@@ -1,0 +1,376 @@
+.planets {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background-image: url('./images/worlds.png');
+  background-size:cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  z-index: 5;
+}
+
+.worldsDisplay {
+  position: absolute;
+  width: 130%;
+  min-width: 2000px;
+  height: 100vh;
+  left: -15%;
+  transition: all 1s;
+}
+
+.leftButton {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 10%;
+  top: 45%;
+  z-index: 6;
+}
+
+.rightButton {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 10%;
+  top: 55%;
+  z-index: 6;
+}
+
+.button {
+  width: 50px;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.leftButton img {
+  transform: rotate(180deg)
+}
+
+.planet {
+  position: relative;
+}
+
+.planetImg {
+  z-index: 5;
+  cursor: pointer;
+}
+.brokenPlanet {
+  position: absolute;
+  left: 0;
+  bottom: -10%;
+  animation: bob 10s infinite;
+}
+
+
+@keyframes bob {
+  0% {
+      bottom: -10%;
+    }
+    50% {
+      bottom: -5%;
+    }
+    100% {
+      bottom: -10%;
+    }
+}
+
+.hertaStation {
+  position: absolute;
+  transition: all 1s;
+  opacity: 0.7;
+  z-index: 4;
+  left: 30%;
+  top: 20%;
+}
+
+.hertaStationImg {
+  animation: tilt 20s infinite;
+  width: 300px;
+}
+
+@keyframes tilt {
+  0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+}
+
+.Jarilo {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transition: all 1s;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.JariloImg {
+  width: 300px;
+}
+
+.jariloSwirl {
+  position: absolute;
+  width: 400px;
+  animation: swirl 15s linear infinite;
+}
+
+@keyframes swirl {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.jariloPulse {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.Xianzhou {
+  position: absolute;
+  left: 65%;
+  bottom: 55%;
+  transition: all 1s;
+  width: 350px;
+}
+
+.XianzhouImg {
+  width: 280px;
+  animation: moveUpDown 10s infinite alternate;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(5%, -10%); /* Adjust the value to control the range of motion */
+  }
+  100% {
+    transform: translate(0%, -0%);
+  }
+}
+
+.Penocony {
+  position: absolute;
+  left: 85%;
+  bottom: 35%;
+  transition: all 1s;
+}
+
+.PenoconyImg {
+  width: 300px;
+  animation: bop 15s infinite;
+}
+
+@keyframes bop {
+  0% {
+    transform: translate(0%, 0%) rotate(20deg);
+  }
+  50% {
+    transform: translate(0%, -10%) rotate(20deg);
+  }
+  100% {
+    transform: translate(0%, -0%) rotate(20deg);
+  }
+}
+
+.aeon {
+  position: absolute;
+  width: 600px;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+  pointer-events: none;
+}
+
+.aeonHover {
+  opacity: 0.8;
+}
+
+.planetContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.floatContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+.sphere {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  animation: float 8s infinite linear;
+  opacity: 0;
+}
+@keyframes float {
+  0% {
+      bottom: 5%;
+      left: 25%;
+      opacity: 0;
+  }
+
+  25% {
+    left: 15%;
+    bottom: 40%;
+    opacity: 0.15;
+  }
+
+  50% {
+    left: 75%;
+    bottom: 50%;
+    opacity: 0.3;
+  }
+  75% {
+    left: 50%;
+    bottom: 75%;
+    opacity: 0.15;
+  }
+  100% {
+    bottom: 95%;
+    left: 75%;
+    opacity: 0;
+  }
+}
+
+.floatAbs {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.dotsAbs {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.dotsContainer {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  animation: moveUpDown 10s infinite alternate;
+}
+
+.dots {
+  background-color: rgb(195, 255, 205);
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: appears 5s infinite forwards;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes appears  {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.starsExtra {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.starsExtra img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.astroid1{
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+  width: 150px;
+  z-index: 1;
+}
+
+.astroid2 {
+  position: absolute;
+  left: 25%;
+  top: 0%;
+  width: 150px;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.planetExtra {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  opacity: 1;
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+}
+.planetExtra img {
+  width: 100%;
+}
+
+.astralExpress {
+  position: absolute;
+  left: 0%;
+  bottom: -40px;
+  animation: trainMove 60s linear infinite;
+  transition: all 1s;
+  z-index: 3;
+}
+
+.astralExpressImg {
+  width: 200px;
+  z-index: 4;
+  opacity: 0.7;
+}
+
+@keyframes trainMove {
+  0% {
+    left: -10%;
+  }
+
+  100% {
+    left: 110%;
+  }
+}

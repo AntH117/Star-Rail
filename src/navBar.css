@@ -1,0 +1,62 @@
+.headerTitles {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-family: "Rubik";
+}
+
+.titles {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titles a {
+  cursor: pointer;
+  transition: all 0.5s;
+  color: white;
+  text-decoration: none;
+}
+
+.titles a:hover {
+  text-shadow:
+    0 0 10px #69e0ff,
+    0 0 20px #69e0ff,
+    0 0 40px #69e0ff;
+}
+.titles-active {
+  text-shadow:
+  0 0 10px #69e0ff,
+  0 0 20px #69e0ff,
+  0 0 40px #69e0ff;
+}
+
+.music {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music img {
+  cursor: pointer;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  width: 170px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 98;
+  color: white;
+  transition: opacity 2s;
+  border-right: solid 1px rgba(255, 255, 255, 0.349);
+}

@@ -1,0 +1,100 @@
+.poster {
+  width: 100%;
+  height: 100vh;
+  min-width: 2000px;
+  display: flex;
+  position: relative;
+  transition: opacity 2s;
+  overflow: hidden;
+  scroll-snap-align: start;
+  opacity: 1;
+}
+
+.bg1 {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  min-width: 2000px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+.bg1 video {
+  width: 100vw;
+  min-width: 2000px;
+  height: auto;
+}
+
+.starter {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  min-width: 2000px;
+  display: flex;
+  z-index: 99;
+  opacity: 1;
+  transition: opacity 2s;
+}
+
+.starterBox {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  max-height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.starterBox video {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  object-fit: cover;
+}
+
+.starterText {
+  position: absolute;
+  width: 300px;
+  height: 100px;
+  z-index: 100;
+  top: 10%;
+  left: 47%;
+  color: white;
+  font-family: "Rubik";
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade {
+  animation: fadeOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 3s ease-in-out forwards; 
+}
+
+.fadeInHeader {
+  animation: fadeIn 5s ease-in-out forwards;
+}
